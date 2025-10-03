@@ -1,5 +1,5 @@
 /*
- * Chức năng:
+ * Chức năng
  * - Tạo ra dma_src.txt và dma_dst.txt.
  * - CPU đọc dma_src.txt vào bộ nhớ.
  * - DMA sao chép nội dung đó sang một vùng nhớ khác.
