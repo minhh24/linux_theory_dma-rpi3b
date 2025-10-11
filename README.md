@@ -5,25 +5,26 @@ bitbake-layers add-layer ../meta-int
 Câu lệnh đầu tiên sẽ thực hiện tạo ra meta-data mới với tên tuỳ ý và câu lệnh tiếp theo sẽ tự động thêm meta-data vào file ~yocto/poky/build/conf/bblayers.conf
 Tạo thư mục như hình
 
-
-
 2.nội dung file https://github.com/minhh24/linux-theory/tree/master
+
 3. chuẩn bị môi trường build
 pc84@pc84-Legion:~/yocto-final/poky$ source oe-init-build-env
-4. bitbake
+
+5. bitbake
 trong yocto custom cần phải bitbake để tạo ra file .ipk
 pc84@pc84-Legion:~/yocto-final/poky/build$ bitbake dma-pwm-demo
-
 file .ipk sẽ nằm ở tmp/deploy/ipk/cortexa7t2hf-neon-vfpv4/dma-pwm-demo_1.0-r0_cortexa7t2hf-neon-vfpv4.ipk
-5. kết nối led và module uart
 
+5. kết nối led và module uart
 trên module uart nối GND với GND trên pi. TX nối RX, RX nối TX
 led nối (+) vào GPIO18. (-) nối GND
+
 6. coppy file .ipk qua raspi
 Sử dụng lệnh: pc84@pc84-Legion:~$ sudo picocom -b 115200 /dev/ttyUSB0
 truy cập dưới tên raspberrypi3 login: root
 coppy file qua pi3b bằng cách 
 pc84@pc84-Legion:~/yocto-final/poky/build$ scp tmp/deploy/ipk/cortexa7t2hf-neon-vfpv4/dma-pwm-demo_1.0-r0_cortexa7t2hf-neon-vfpv4.ipk root@192.168.2.1:/tmp/
+
 7. truy cập ssh vào pi qua uart và chạy 
 kiểm tra trong /var/volatile/tmp có tmp chưa :
 root@raspberrypi3:/var/volatile/tmp# ls
