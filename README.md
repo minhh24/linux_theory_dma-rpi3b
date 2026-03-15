@@ -42,6 +42,8 @@ Giải thích: Hàm mailbox (mem_alloc, mem_lock, mem_free) thực chất chỉ 
 - Không có cơ chế interrupt báo ngược lại khi mailbox có dữ liệu mới. CPU chỉ “đặt câu hỏi” và “chờ lấy câu trả lời” trực tiếp.
 	- Như vậy, cơ chế hoạt động đúng với kiểu Polling: CPU chủ động kiểm tra và lấy dữ liệu từ mailbox, không có sự kiện ngắt hoặc callback tự động.
 Nói ngắn gọn: Code demo DMA file copy này sử dụng Mailbox Polling mode, vì CPU gửi request rồi tự mình đọc kết quả, chứ không chờ interrupt từ mailbox.
+
+
 video demo https://www.youtube.com/watch?v=w4BLRHbd6_o
 
 Nguyen Quang Minh - 0916254336
