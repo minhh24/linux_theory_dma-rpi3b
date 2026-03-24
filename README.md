@@ -23,8 +23,6 @@ led nối (+) vào GPIO18. (-) nối GND
 Sử dụng lệnh: pc84@pc84-Legion:~$ sudo picocom -b 115200 /dev/ttyUSB0
 truy cập dưới tên raspberrypi3 login: root
 coppy file qua pi3b bằng cách
-pc84@pc84-Legion:~/yocto-final/poky/build$ scp tmp/deploy/ipk/cortexa7t2hf-neon-vfpv4/dma-pwm-demo_1.0-r0_cortexa7t2hf-neon-vfpv4.ipk root@192.168.2.1:/tmp
-
 
 8. truy cập ssh vào pi qua uart và chạy 
 kiểm tra trong /var/volatile/tmp có tmp chưa :
